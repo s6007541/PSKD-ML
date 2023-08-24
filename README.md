@@ -41,47 +41,45 @@ $ python main_new.py --PSKD \
 * Expected Calibration Error (ECE)
 * Area Under the Risk-coverage Curve (AURC)
 
-### Results on CIFAR-100
+### Results on ResNet-18
 
 | Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
 |----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
-| PreAct ResNet-18 (baseline)                  | CIFAR-100 | 24.18       | 6.90        | 1.10     | 11.84    | 67.65     |
-| PreAct ResNet-18 + Label Smoothing           | CIFAR-100 | 20.94       | 6.02        | 0.98     | 10.79    | 57.74     |
-| PreAct ResNet-18 + CS-KD [[CVPR'20][cs-kd]]  | CIFAR-100 | 21.30       | 5.70        | 0.88     | 6.24     | 56.56     |
-| PreAct ResNet-18 + TF-KD [[CVPR'20][tf-kd]]  | CIFAR-100 | 22.88       | 6.01        | 1.05     | 11.96    | 61.77     |
-| PreAct ResNet-18 + **PS-KD**                 | CIFAR-100 | **20.82**   | **5.10**    | **0.76** | **1.77** | **52.10** |
-| PreAct ResNet-101 (baseline)                 | CIFAR-100 | 20.75       | 5.28        | 0.89     | 10.02    | 55.45     |
-| PreAct ResNet-101 + Label Smoothing          | CIFAR-100 | 19.84       | 5.07        | 0.93     | **3.43** | 95.76     |
-| PreAct ResNet-101 + CS-KD [[CVPR'20][cs-kd]] | CIFAR-100 | 20.76       | 5.62        | 1.02     | 12.18    | 64.44     |
-| PreAct ResNet-101 + TF-KD [[CVPR'20][tf-kd]] | CIFAR-100 | 20.13       | 5.10        | 0.84     | 6.14     | 58.8      |
-| PreAct ResNet-101 + **PS-KD**                | CIFAR-100 | **19.43**   | **4.30**    | **0.74** | 6.92     | **49.01** |
-| DenseNet-121 (baseline)                      | CIFAR-100 | 20.05       | 4.99        | 0.82     | 7.34     | 52.21     |
-| DenseNet-121 + Label Smoothing               | CIFAR-100 | 19.80       | 5.46        | 0.92     | 3.76     | 91.06     |
-| DenseNet-121 + CS-KD [[CVPR'20][cs-kd]]      | CIFAR-100 | 20.47       | 6.21        | 1.07     | 13.80    | 73.37     |
-| DenseNet-121 + TF-KD [[CVPR'20][tf-kd]]      | CIFAR-100 | 19.88       | 5.10        | 0.85     | 7.33     | 69.23     |
-| DenseNet-121 + **PS-KD**                     | CIFAR-100 | **18.73**   | **3.90**    | **0.69** | **3.71** | **45.55** |
-| ResNeXt-29 (baseline)                        | CIFAR-100 | 18.65       | 4.47        | 0.74     | **4.17** | 44.27     |
-| ResNeXt-29 + Label Smoothing                 | CIFAR-100 | 17.60       | 4.23        | 1.05     | 22.14    | 41.92     |
-| ResNeXt-29 + CS-KD [[CVPR'20][cs-kd]]        | CIFAR-100 | 18.26       | 4.37        | 0.80     | 5.95     | 42.11     |
-| ResNeXt-29 + TF-KD [[CVPR'20][tf-kd]]        | CIFAR-100 | 17.33       | 3.87        | 0.74     | 6.73     | 40.34     |
-| ResNeXt-29 + **PS-KD**                       | CIFAR-100 | **17.28**   | **3.60**    | **0.72** | 9.18     | **40.19** |
-| PyramidNet-200 (baseline)                    | CIFAR-100 | 16.80       | 3.69        | 0.73     | 8.04     | 36.95     |
-| PyramidNet-200 + Label Smoothing             | CIFAR-100 | 17.82       | 4.72        | 0.89     | 3.46     | 105.02    |
-| PyramidNet-200 + CS-KD [[CVPR'20][cs-kd]]    | CIFAR-100 | 18.31       | 5.70        | 1.17     | 14.70    | 70.05     |
-| PyramidNet-200 + TF-KD [[CVPR'20][tf-kd]]    | CIFAR-100 | 16.48       | 3.37        | 0.79     | 10.48    | 37.04     |
-| PyramidNet-200 + **PS-KD**                   | CIFAR-100 | **15.49**   | **3.08**    | **0.56** | **1.83** | **32.14** |
+| ResNet-18 (baseline)                         | CIFAR-100 | 21.41       | 5.57        | 1.10     | 11.84    | 67.65     |
+| ResNet-18 + BYOT                             | CIFAR-100 | 21.89       | 6.02        | 0.98     | 10.79    | 57.74     |
+| ResNet-18 + DMFL                             | CIFAR-100 | 21.61       | 5.70        | 0.88     | 6.24     | 56.56     |
+| ResNet-18 + PS-KD                            | CIFAR-100 | **19.94**   | 6.01        | 1.05     | 11.96    | 61.77     |
+| ResNet-18 + PS-KD + BYOT                     | CIFAR-100 | 20.67       | **5.10**    | **0.76** | **1.77** | **52.10** |
+| ResNet-18 + PS-KD + DMFL                     | CIFAR-100 | 20.02       | 5.28        | 0.89     | 10.02    | 55.45     |
+| ResNet-18 + DMFL  + BYOT                     | CIFAR-100 | 21.18       | 5.07        | 0.93     | **3.43** | 95.76     |
+| ResNet-18 + PS-KD + BYOT + DMFL              | CIFAR-100 | 20.23       | 5.62        | 1.02     | 12.18    | 64.44     |
+
+### Results on ResNet-50
+
+| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
+|----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
+| ResNet-50 (baseline)                         | CIFAR-100 | 24.50       | 6.90        | 1.10     | 11.84    | 67.65     |
+| ResNet-50 + BYOT                             | CIFAR-100 | 20.94       | 6.02        | 0.98     | 10.79    | 57.74     |
+| ResNet-50 + DMFL                             | CIFAR-100 | 21.30       | 5.70        | 0.88     | 6.24     | 56.56     |
+| ResNet-50 + PS-KD                            | CIFAR-100 | 22.88       | 6.01        | 1.05     | 11.96    | 61.77     |
+| ResNet-50 + PS-KD + BYOT                     | CIFAR-100 | **20.82**   | **5.10**    | **0.76** | **1.77** | **52.10** |
+| ResNet-50 + PS-KD + DMFL                     | CIFAR-100 | 20.75       | 5.28        | 0.89     | 10.02    | 55.45     |
+| ResNet-50 + DMFL  + BYOT                     | CIFAR-100 | 19.84       | 5.07        | 0.93     | **3.43** | 95.76     |
+| ResNet-50 + PS-KD + BYOT + DMFL              | CIFAR-100 | 20.76       | 5.62        | 1.02     | 12.18    | 64.44     |
 
 
-### Results on ImageNet
+### Results on ResNeXt-18
 
-| Model +Method                                       | Dataset  | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
-|-----------------------------------------------------|:--------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
-| DenseNet-264*                                       | ImageNet | 22.15       | 6.12        | --       | --       | --        |
-| ResNet-152                                          | ImageNet | 22.19       | 6.19        | 0.88     | 3.84     | 61.79     |
-| ResNet-152 + Label Smoothing                        | ImageNet | 21.73       | 5.85        | 0.92     | 3.91     | 68.24     |
-| ResNet-152 + CS-KD [[CVPR'20][cs-kd]]               | ImageNet | 21.61       | 5.92        | 0.90     | 5.79     | 62.12     |
-| ResNet-152 + TF-KD [[CVPR'20][tf-kd]]               | ImageNet | 22.76       | 6.43        | 0.91     | 4.70     | 65.28     |
-| ResNet-152 + PS-KD                                  | ImageNet | **21.41**   | **5.86**    | **0.84** | **2.51** | **61.01** |
+| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
+|----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
+| ResNeXt-50 (baseline)                        | CIFAR-100 | 24.50       | 6.90        | 1.10     | 11.84    | 67.65     |
+| ResNeXt-50 + BYOT                            | CIFAR-100 | 20.94       | 6.02        | 0.98     | 10.79    | 57.74     |
+| ResNeXt-50 + DMFL                            | CIFAR-100 | 21.30       | 5.70        | 0.88     | 6.24     | 56.56     |
+| ResNeXt-50 + PS-KD                           | CIFAR-100 | 22.88       | 6.01        | 1.05     | 11.96    | 61.77     |
+| ResNeXt-50 + PS-KD + BYOT                    | CIFAR-100 | **20.82**   | **5.10**    | **0.76** | **1.77** | **52.10** |
+| ResNeXt-50 + PS-KD + DMFL                    | CIFAR-100 | 20.75       | 5.28        | 0.89     | 10.02    | 55.45     |
+| ResNeXt-50 + DMFL  + BYOT                    | CIFAR-100 | 19.84       | 5.07        | 0.93     | **3.43** | 95.76     |
+| ResNeXt-50 + PS-KD + BYOT + DMFL             | CIFAR-100 | 20.76       | 5.62        | 1.02     | 12.18    | 64.44     |
 
 &#42; denotes results reported in the original papers
 
