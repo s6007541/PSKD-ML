@@ -1,4 +1,3 @@
-[![LGCNS AI Research](https://img.shields.io/badge/lgcns-ai%20research-red)](https://www.lgcns.com/En/Home)
 [![pytorch](https://img.shields.io/badge/pytorch-1.6.0-%2523ee4c2c.svg)](https://pytorch.org/)
 
 # Progressive Self-Knowledge Distillation with Mutual Learning
