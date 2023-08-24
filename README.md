@@ -16,79 +16,23 @@ We have tested the code on the following environments:
 * Python 3.7.7 / Pytorch (>=1.6.0) / torchvision (>=0.7.0)
 
 ## Datasets
-Currently, only **CIFAR-100** dataset is supported.
+Currently, only **CIFAR-100** and **Tiny-Imagenet** dataset is supported.
 
 ## How to Run
 ### Single-GPU Training
 To train a model on single-GPU, run the command as follows:
 ```bash
-$ CUDA_VISIBLE_DEVICES='<GPU ID>' python3 main.py --lr 0.1 \
-                  --lr_decay_schedule 150 225 \
-                  --PSKD \
-                  --experiments_dir '<set your own path>' \
-                  --batch_size 128 \
-                  --classifier_type 'ResNet18' \
-                  --data_path '<root your own data path>' \
-                  --data_type '<cifar100 or imagenet>' \
-                  --alpha_T 0.8 \
+$ python main_new.py --PSKD \
+                  --BYOT \
+                  --DML \
+                  --data_type '<DATASET>' \
+                  --classifier_type '<MODEL>' \
+                  --BYOT_from_k_block '<Number of Blocks in BlackBone>'\
+
 ```
-### Single-node & Multi-GPU Training
-To train a model with 1 nodes & multi-GPU, run the command as follows:
-```bash
-$ CUDA_VISIBLE_DEVICES='<GPU IDs>' python3 main.py --lr 0.1 \
-                  --lr_decay_schedule 150 225 \
-                  --PSKD \
-                  --experiments_dir '<set your own path>' \
-                  --batch_size 128 \
-                  --classifier_type 'ResNet18' \
-                  --data_path '<root your own data path>' \
-                  --data_type '<cifar100 or imagenet>' \
-                  --alpha_T 0.8 \
-                  --rank 0 \
-                  --world_size 1 \
-                  --multiprocessing_distributed
-```
-### Multi-node Training
-To train a model with 2 nodes, for instance, run the commands below in sequence:
-```bash
-# on the node #0
-$ CUDA_VISIBLE_DEVICES='<GPU IDs>' python3 main.py --lr 0.1 \
-                  --lr_decay_schedule 150 225 \
-                  --PSKD \
-                  --experiments_dir '<set your own path>' \a
-                  --batch_size 64 \
-                  --classifier_type 'ResNet18' \
-                  --data_path '<root your own data path>' \
-                  --data_type '<cifar100 or imagenet>' \
-                  --alpha_T 0.8 \
-                  --rank 0 \
-                  --world_size 2 \
-                  --dist_url tcp://{master_ip}:{master_port} \
-                  --multiprocessing_distributed
-```
-```bash
-# on the node #1
-$ CUDA_VISIBLE_DEVICES='<GPU IDs>' python3 main.py --lr 0.1 \
-                  --lr_decay_schedule 150 225 \
-                  --PSKD \
-                  --experiments_dir '<set your own path>' \
-                  --batch_size 64 \
-                  --classifier_type 'ResNet18' \
-                  --data_path '<root your own data path>' \
-                  --data_type '<cifar100 or imagenet>' \
-                  --alpha_T 0.8 \
-                  --rank 1 \
-                  --world_size 2 \
-                  --dist_url tcp://{master_ip}:{master_port} \
-                  --multiprocessing_distributed
-```
-## Saving & Loading Checkpoints
-### Saved Filenames
-* `save_dir` will be automatically determined(with sequential number suffixes) unless otherwise designated.
-* Model's checkpoints are saved in `./{experiments_dir}/models/checkpoint_{epoch}.pth`.
-* The best checkpoints are saved in `./{experiments_dir}/models/checkpoint_best.pth`.
-### Loading Checkpoints (resume)
-* Pass model path as a `--resume` argument
+
+
+
 
 ## Experimental Results
 ### Performance measures
