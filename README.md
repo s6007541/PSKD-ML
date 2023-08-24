@@ -3,12 +3,12 @@
 
 # Progressive Self-Knowledge Distillation with Mutual Learning
 * PyTorch implementation of **Progressive Self-Knowledge Distillation with Mutual Learning**.  
-[[`Slides`](https://drive.google.com/file/d/1B3EVWjvBwoNyEvFEfFW0FkFxTQWRun--/view?usp=sharing)] [[`Paper`](https://openaccess.thecvf.com/content/ICCV2021/html/Kim_Self-Knowledge_Distillation_With_Progressive_Refinement_of_Targets_ICCV_2021_paper.html)] 
+[[`Slides`](https://docs.google.com/presentation/d/1V0aSEbBalg8lnKeg6NVcS9FPs3CAw2xy/edit?usp=sharing&ouid=104359145724275927049&rtpof=true&sd=true)] [[`Paper`](https://openaccess.thecvf.com/content/ICCV2021/html/Kim_Self-Knowledge_Distillation_With_Progressive_Refinement_of_Targets_ICCV_2021_paper.html)] 
 
 ## Abstract
 Deep neural networks based on large network architectures are often prone to the over-fitting problem and thus inadequate for generalization. Recent self-knowledge distillation (self-KD) approaches have successfully addressed this issue by regularizing a single network using dark knowledge (e.g., knowledge acquired from wrong predictions). Motivated by the idea of online collaborative learning using a large student cohort, we extend the online self-KD methods by combining the two learning schemes as in real-world learning environments. We seek to mimic the real-world self- and collaborative-learning strategies in deep neural networks for the image classification task, aimed to better predict the classification accuracy with lower computational costs during training. We closely explore the performance of a teacher-free dynamically evolving self-distilled network and verify that our approach on the CIFAR-100 dataset gives sufficient insights into combining self-KD and mutual feature learning.
 <p align="center">
-<img src="image/overview.png" height=200>
+<img src="image/overview.png" height=350>
 </p>
 
 ## Requirements
@@ -16,12 +16,7 @@ We have tested the code on the following environments:
 * Python 3.7.7 / Pytorch (>=1.6.0) / torchvision (>=0.7.0)
 
 ## Datasets
-Currently, only **CIFAR-100**, **ImageNet** dataset is supported.
-
-#) To verify the effectivness of PS-KD on Detection task and Machine translation task, we used   
-   * For object detection: Pascal VOC
-   * For machine translation: IWSLT 15 English-German / German-English, Multi30k. 
-   * (Please refer to the paper for more details)
+Currently, only **CIFAR-100** dataset is supported.
 
 ## How to Run
 ### Single-GPU Training
