@@ -43,29 +43,29 @@ $ python main_new.py --PSKD \
 
 ### Results on ResNet-18
 
-| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
+| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC(x1e3)|
 |----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
 | ResNet-18 (baseline)                         | CIFAR-100 | 21.41       | 5.57        | 0.87     | 5.14     | 56.92     |
 | ResNet-18 + BYOT                             | CIFAR-100 | 21.89       | 5.64        | 1.00     | 11.24    | 53.79     |
 | ResNet-18 + DMFL                             | CIFAR-100 | 21.61       | 5.45        | 0.87     | 5.31     | 57.13     |
-| ResNet-18 + PS-KD                            | CIFAR-100 | **19.94**   | 4.79        | 0.79     | 3.78     | 50.44     |
+| ResNet-18 + PS-KD                            | CIFAR-100 | **19.94**   | 4.79        | 0.79     | 4.21     | 50.44     |
 | ResNet-18 + PS-KD + BYOT                     | CIFAR-100 | 20.67       | 4.66        | 0.78     | 7.42     | 50.91     |
 | ResNet-18 + PS-KD + DMFL                     | CIFAR-100 | 20.02       | 4.73        | 0.80     | 4.52     | 50.55     |
 | ResNet-18 + DMFL  + BYOT                     | CIFAR-100 | 21.18       | 5.47        | 1.02     | 11.74    | 54.89     |
-| ResNet-18 + PS-KD + BYOT + DMFL              | CIFAR-100 | 20.03       | **4.16**    | **0.72** | 7.15     | 49.86     |
+| ResNet-18 + PS-KD + BYOT + DMFL              | CIFAR-100 | 20.03       | **4.16**    | **0.72** | **4.15** | **49.86** |
 
 ### Results on ResNet-50
 
 | Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
 |----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
-| ResNet-50 (baseline)                         | CIFAR-100 | 24.50       | 6.90        | 1.10     | 11.84    | 67.65     |
-| ResNet-50 + BYOT                             | CIFAR-100 | 20.94       | 6.02        | 0.98     | 10.79    | 57.74     |
-| ResNet-50 + DMFL                             | CIFAR-100 | 21.30       | 5.70        | 0.88     | 6.24     | 56.56     |
-| ResNet-50 + PS-KD                            | CIFAR-100 | 22.88       | 6.01        | 1.05     | 11.96    | 61.77     |
-| ResNet-50 + PS-KD + BYOT                     | CIFAR-100 | **20.82**   | **5.10**    | **0.76** | **1.77** | **52.10** |
-| ResNet-50 + PS-KD + DMFL                     | CIFAR-100 | 20.75       | 5.28        | 0.89     | 10.02    | 55.45     |
-| ResNet-50 + DMFL  + BYOT                     | CIFAR-100 | 19.84       | 5.07        | 0.93     | **3.43** | 95.76     |
-| ResNet-50 + PS-KD + BYOT + DMFL              | CIFAR-100 | 20.76       | 5.62        | 1.02     | 12.18    | 64.44     |
+| ResNet-50 (baseline)                         | CIFAR-100 | 21.96       | 5.21        | 0.89     | 8.75     | 57.24     |
+| ResNet-50 + BYOT                             | CIFAR-100 | 19.03       | 4.38        | 0.94     | 11.51    | 48.32     |
+| ResNet-50 + DMFL                             | CIFAR-100 | 20.13       | 4.96        | 0.85     | 8.63     | 51.20     |
+| ResNet-50 + PS-KD                            | CIFAR-100 | 20.19       | 4.50        | 0.77     | 4.03     | 50.76     |
+| ResNet-50 + PS-KD + BYOT                     | CIFAR-100 | 17.92       | 3.94        | 0.75     | 8.96     | 46.76     |
+| ResNet-50 + PS-KD + DMFL                     | CIFAR-100 | 19.12       | 4.43        | 0.73     | **3.51** | 47.57     |
+| ResNet-50 + DMFL  + BYOT                     | CIFAR-100 | 19.70       | 4.77        | 0.87     | 9.79     | 48.58     |
+| ResNet-50 + PS-KD + BYOT + DMFL              | CIFAR-100 | 17.52       | **3.75**    | **0.71** | 10.00    | **46.25** |
 
 
 ### Results on ResNeXt-18
