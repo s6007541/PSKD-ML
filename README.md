@@ -43,7 +43,7 @@ $ python main_new.py --PSKD \
 
 ### Results on ResNet-18
 
-| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC(x1e3)|
+| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE (%)  | AURC (1e3)|
 |----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
 | ResNet-18 (baseline)                         | CIFAR-100 | 21.41       | 5.57        | 0.87     | 5.14     | 56.92     |
 | ResNet-18 + BYOT                             | CIFAR-100 | 21.89       | 5.64        | 1.00     | 11.24    | 53.79     |
@@ -56,7 +56,7 @@ $ python main_new.py --PSKD \
 
 ### Results on ResNet-50
 
-| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
+| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE (%)  | AURC (1e3)|
 |----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
 | ResNet-50 (baseline)                         | CIFAR-100 | 21.96       | 5.21        | 0.89     | 8.75     | 57.24     |
 | ResNet-50 + BYOT                             | CIFAR-100 | 19.03       | 4.38        | 0.94     | 11.51    | 48.32     |
@@ -70,7 +70,7 @@ $ python main_new.py --PSKD \
 
 ### Results on ResNeXt-18
 
-| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
+| Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE (%)  | AURC (1e3)|
 |----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
 | ResNeXt-50 (baseline)                        | CIFAR-100 | 19.25       | 4.48        | 0.81     | 7.49     | 48.13     |
 | ResNeXt-50 + BYOT                            | CIFAR-100 | 19.09       | 4.54        | 0.84     | 9.62     | 46.66     |
@@ -81,46 +81,3 @@ $ python main_new.py --PSKD \
 | ResNeXt-50 + DMFL  + BYOT                    | CIFAR-100 | 19.30       | 4.23        | 0.88     | 9.86     | 47.98     |
 | ResNeXt-50 + PS-KD + BYOT + DMFL             | CIFAR-100 | **18.27**   | **4.11**    | **0.72** | 10.32    | **45.71** |
 
-## Citation
-If you find this repository useful, please consider giving a star :star: and citation PS-KD:
-```
-@InProceedings{Kim_2021_ICCV,
-    author    = {Kim, Kyungyul and Ji, ByeongMoon and Yoon, Doyoung and Hwang, Sangheum},
-    title     = {Self-Knowledge Distillation With Progressive Refinement of Targets},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {6567-6576}
-}
-```
-## Contact for Issues
-* ByeongMoon Ji, jibm@lgcns.com
-* Kyungyul Kim, kyungyul.kim@lgcns.com
-* Doyoung Yoon, dy0916@lgcns.com
-
-## License
-```
-Copyright (c) 2021-present LG CNS Corp.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-```
-
-<!-- paper link -->
-[cs-kd]:https://openaccess.thecvf.com/content_CVPR_2020/papers/Yun_Regularizing_Class-Wise_Predictions_via_Self-Knowledge_Distillation_CVPR_2020_paper.pdf
-[tf-kd]:https://openaccess.thecvf.com/content_CVPR_2020/papers/Yuan_Revisiting_Knowledge_Distillation_via_Label_Smoothing_Regularization_CVPR_2020_paper.pdf
