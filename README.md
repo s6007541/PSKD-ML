@@ -1,14 +1,12 @@
 [![LGCNS AI Research](https://img.shields.io/badge/lgcns-ai%20research-red)](https://www.lgcns.com/En/Home)
 [![pytorch](https://img.shields.io/badge/pytorch-1.6.0-%2523ee4c2c.svg)](https://pytorch.org/)
 
-# Self-Knowledge Distillation with Progressive Refinement of Targets (PS-KD)
-**Accepted at ICCV 2021, oral presentation**
-* Official PyTorch implementation of **Self-Knowledge Distillation with Progressive Refinement of Targets (PS-KD)**.  
-[[`Slides`](https://drive.google.com/file/d/1B3EVWjvBwoNyEvFEfFW0FkFxTQWRun--/view?usp=sharing)] [[`Paper`](https://openaccess.thecvf.com/content/ICCV2021/html/Kim_Self-Knowledge_Distillation_With_Progressive_Refinement_of_Targets_ICCV_2021_paper.html)] [[`Video`](https://drive.google.com/file/d/1QxqSbzn-egdYI13IYn3W4dmIvm_Iw4ku/view?usp=sharing)]
-* ****Kyungyul Kim, ByeongMoon Ji, Doyoung Yoon and Sangheum Hwang****
+# Progressive Self-Knowledge Distillation with Mutual Learning
+* PyTorch implementation of **Progressive Self-Knowledge Distillation with Mutual Learning**.  
+[[`Slides`](https://drive.google.com/file/d/1B3EVWjvBwoNyEvFEfFW0FkFxTQWRun--/view?usp=sharing)] [[`Paper`](https://openaccess.thecvf.com/content/ICCV2021/html/Kim_Self-Knowledge_Distillation_With_Progressive_Refinement_of_Targets_ICCV_2021_paper.html)] 
 
 ## Abstract
-The generalization capability of deep neural networks has been substantially improved by applying a wide spectrum of regularization methods, e.g., restricting function space, injecting randomness during training, augmenting data, etc. In this work, we propose a simple yet effective regularization method named ***progressive self-knowledge distillation*** **(PS-KD)**, which progressively distills a model's own knowledge to soften hard targets (i.e., one-hot vectors) during training. Hence, it can be interpreted within a framework of knowledge distillation as a student becomes a teacher itself. Specifically, targets are adjusted adaptively by combining the ground-truth and past predictions from the model itself. Please refer to the paper for more details.
+Deep neural networks based on large network architectures are often prone to the over-fitting problem and thus inadequate for generalization. Recent self-knowledge distillation (self-KD) approaches have successfully addressed this issue by regularizing a single network using dark knowledge (e.g., knowledge acquired from wrong predictions). Motivated by the idea of online collaborative learning using a large student cohort, we extend the online self-KD methods by combining the two learning schemes as in real-world learning environments. We seek to mimic the real-world self- and collaborative-learning strategies in deep neural networks for the image classification task, aimed to better predict the classification accuracy with lower computational costs during training. We closely explore the performance of a teacher-free dynamically evolving self-distilled network and verify that our approach on the CIFAR-100 dataset gives sufficient insights into combining self-KD and mutual feature learning.
 <p align="center">
 <img src="images/overview.png" height=200>
 </p>
