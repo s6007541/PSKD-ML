@@ -72,14 +72,14 @@ $ python main_new.py --PSKD \
 
 | Model + Method                               | Dataset   | Top-1 Error | Top-5 Error | NLL      | ECE      | AURC      |
 |----------------------------------------------|:---------:|:-----------:|:-----------:|:--------:|:--------:|:---------:|
-| ResNeXt-50 (baseline)                        | CIFAR-100 | 19.25       | 4.48        | 0.81     | 11.84    | 67.65     |
-| ResNeXt-50 + BYOT                            | CIFAR-100 | 19.09       | 4.54        | 0.84     | 10.79    | 57.74     |
-| ResNeXt-50 + DMFL                            | CIFAR-100 | 19.41       | 4.43        | 0.82     | 6.24     | 56.56     |
-| ResNeXt-50 + PS-KD                           | CIFAR-100 | 18.79       | 4.20        | 0.74     | 11.96    | 61.77     |
-| ResNeXt-50 + PS-KD + BYOT                    | CIFAR-100 | 18.36       | 4.34        | 0.80     | **1.77** | **52.10** |
-| ResNeXt-50 + PS-KD + DMFL                    | CIFAR-100 | 19.25       | 4.14        | 0.75     | 10.02    | 55.45     |
-| ResNeXt-50 + DMFL  + BYOT                    | CIFAR-100 | 19.30       | 4.23        | 0.88     | **3.43** | 95.76     |
-| ResNeXt-50 + PS-KD + BYOT + DMFL             | CIFAR-100 | **18.27**   | **4.11**    | **0.72** | 12.18    | 64.44     |
+| ResNeXt-50 (baseline)                        | CIFAR-100 | 19.25       | 4.48        | 0.81     | 7.49     | 48.13     |
+| ResNeXt-50 + BYOT                            | CIFAR-100 | 19.09       | 4.54        | 0.84     | 9.62     | 46.66     |
+| ResNeXt-50 + DMFL                            | CIFAR-100 | 19.41       | 4.43        | 0.82     | 7.45     | 47.72     |
+| ResNeXt-50 + PS-KD                           | CIFAR-100 | 18.79       | 4.20        | 0.74     | **4.85** | 48.52     |
+| ResNeXt-50 + PS-KD + BYOT                    | CIFAR-100 | 18.36       | 4.34        | 0.80     | 9.99     | 46.50     |
+| ResNeXt-50 + PS-KD + DMFL                    | CIFAR-100 | 19.25       | 4.14        | 0.75     | 5.18     | 47.46     |
+| ResNeXt-50 + DMFL  + BYOT                    | CIFAR-100 | 19.30       | 4.23        | 0.88     | 9.86     | 47.98     |
+| ResNeXt-50 + PS-KD + BYOT + DMFL             | CIFAR-100 | **18.27**   | **4.11**    | **0.72** | 10.32    | **45.71** |
 
 ## Citation
 If you find this repository useful, please consider giving a star :star: and citation PS-KD:
