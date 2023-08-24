@@ -1,0 +1,43 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+_libgcc_mutex=0.1=main
+_openmp_mutex=5.1=1_gnu
+ca-certificates=2023.01.10=h06a4308_0
+certifi=2022.12.7=py37h06a4308_0
+charset-normalizer=3.1.0=pypi_0
+cycler=0.11.0=pypi_0
+fonttools=4.38.0=pypi_0
+idna=3.4=pypi_0
+kiwisolver=1.4.4=pypi_0
+libedit=3.1.20221030=h5eee18b_0
+libffi=3.2.1=hf484d3e_1007
+libgcc-ng=11.2.0=h1234567_1
+libgomp=11.2.0=h1234567_1
+libstdcxx-ng=11.2.0=h1234567_1
+matplotlib=3.5.3=pypi_0
+ncurses=6.4=h6a678d5_0
+numpy=1.21.6=pypi_0
+openssl=1.1.1t=h7f8727e_0
+packaging=23.1=pypi_0
+pillow=9.5.0=pypi_0
+pip=22.3.1=py37h06a4308_0
+protobuf=3.20.3=pypi_0
+pyparsing=3.0.9=pypi_0
+python=3.7.5=h0371630_0
+python-dateutil=2.8.2=pypi_0
+readline=7.0=h7b6447c_5
+requests=2.30.0=pypi_0
+setuptools=65.6.3=py37h06a4308_0
+six=1.16.0=pypi_0
+sqlite=3.33.0=h62c20be_0
+tensorboardx=2.6=pypi_0
+tk=8.6.12=h1ccaba5_0
+torch=1.12.1+cu113=pypi_0
+torchaudio=0.12.1+cu113=pypi_0
+torchvision=0.13.1+cu113=pypi_0
+typing-extensions=4.5.0=pypi_0
+urllib3=2.0.2=pypi_0
+wheel=0.38.4=py37h06a4308_0
+xz=5.4.2=h5eee18b_0
+zlib=1.2.13=h5eee18b_0
