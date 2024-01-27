@@ -1,6 +1,6 @@
 [![pytorch](https://img.shields.io/badge/pytorch-1.6.0-%2523ee4c2c.svg)](https://pytorch.org/)
 
-# Progressive Self-Knowledge Distillation with Mutual Learning
+# PSKD-ML : Progressive Self-Knowledge Distillation with Mutual Learning
 * PyTorch implementation of **Progressive Self-Knowledge Distillation with Mutual Learning**.  
 [[`Slides`](https://docs.google.com/presentation/d/1V0aSEbBalg8lnKeg6NVcS9FPs3CAw2xy/edit?usp=sharing&ouid=104359145724275927049&rtpof=true&sd=true)]
 [[`Paper`](https://github.com/s6007541/Progressive-Self-Knowledge-Distillation-with-Mutual-Learning/blob/main/pdf_files/PDKD_ML.pdf)] 
